@@ -1,6 +1,9 @@
 
 {
-  "name": "Scent of Rose - Adult Dating & Live Streams",
-  "description": "An exquisite landing page for Scent of Rose, an exclusive adult dating and live streaming platform. It features a sophisticated dark theme with rose and neon accents, designed to be alluring, modern, and engaging for a US audience.",
-  "requestFramePermissions": []
+  "name": "Lilac - Premium Adult Social & Live",
+  "description": "A sophisticated, high-end adult dating and live streaming landing page for the US market, featuring modern UI, real-time interaction, and AI-powered matching.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
 }
