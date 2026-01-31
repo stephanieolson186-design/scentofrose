@@ -1,19 +1,70 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
   <meta charset="utf-8" />
-  <title>scentofrose - Adult Dating & Live Streaming</title>
+  <title>Scent of Rose</title>
   <base href="/" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            magenta: {
+              300: '#f871b8',
+              400: '#f43f9a',
+              500: '#ec4899',
+              600: '#db2777',
+              700: '#be185d',
+              900: '#831843'
+            },
+            violet: {
+              300: '#a78bfa',
+              400: '#8b5cf6',
+              500: '#7c3aed',
+              600: '#6d28d9',
+              700: '#5b21b6',
+              900: '#4c1d95'
+            },
+            gold: {
+              400: '#facc15',
+            },
+            teal: {
+              300: '#5eead4',
+              500: '#14b8a6',
+              900: '#134e4a'
+            }
+          }
+        }
+      }
+    }
+  </script>
   <style>
     body {
       font-family: 'Poppins', sans-serif;
+      background-color: #1a1a1a;
+      color: #E5E5E5;
+    }
+    .font-serif-display {
+      font-family: 'Playfair Display', serif;
+    }
+    /* Add a subtle grain texture */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAAUVBMVEWFhYWDg4N3d3dtbW17e3t1dXVAAAAacXJUPEBFQkZUT0tPREA2OC4zODMtMC0lKSgjIyN3d3dFRUVbX19sbW1bXl92dnY0NDQ2NjY6Ojo8PDw+Pj5GRkZSUlJxcXGPj49NTU1dXV11dXV/f39/f395eXl/f39+fn58fHx+fn55eXl8fHx7e3t6enp5eXl7e3t4eHh3d3d2dnZ1dXV0dHRtbW1ra2toaGhiYmJjY2NlZWVmZmZpampubm5wcHCFhYWDg4N3d3dtbW17e3t1dXVcXV1ZVlZWT09KR0ZDRkVEQkJBQkNCQ0NEREZERUZHR0dJSUlKS0tMTExPT09SUlJWVlZaWlpdXV1iYmJjY2NlZWVmZmZpampubm5wcHCKioqNjo6QkJCQkJCRkZGSkpKVlZWZmZmcnJyjo6OlpaWqqqqurq6wsLCysrK0tLS1tbW5ubm7u7u8vLy9vb2/v7/AwMDBwcHCwsLDw8PExMTFxcXGxsbHx8fIyMjJycnKysrLy8vMzMzNzc3Pz8/Q0NDR0dHS0tLT09PU1tXV1dbX19fY2NjZ2dna2trb29vc3Nzd3d3e3t7f39/g4ODh4eHi4uLj4+Pk5OTl5eXm5ubn5+fo6Ojp6enq6urr6+vs7Ozt7e3u7u7v7+/w8PDx8fHy8vLz8/P09PT19fX29vb39/f4+Pj5+fn6+vr7+/v8/Pz9/f3+/v7////AAbHiAAAALXRSTlMA+pW+u8PftKqg39bZ1s/Qz8/PyMi/v7+/v7+/v7++vr6+vr6+v76+vr6+v76+vL2+vL28vH28vHy8vHy8vHy8vHx8vHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDy8vL29vb29vb29vb29vb2+vr6+vr6+vr6+vr6+vr6+vr6+v7+/v7+/v7+/v7+/v7/AwMDHyMnKy8zNzs/Q0dLU1tfa29zd3t/h4uPk5ebn6Onq6+zt7u/x8/T19vf4+fr7/P3+/v7/////jlhKAAAAAWJLR0QN9rRh9QAAANVJREFUeNqV00sWAyEIBVDbVVERufd83v//B51pE8ey1+RSS7gASOQzD2q22VpVtZ435d74bX2a1XJe7t1+zYqvnfXdp/UMfD48n08eR49f5/PZ8/nm+fH0/P7z/AD8eP3z+fz0/Prx+vXx+vH5+wO4+vH5+fXj+fXn8/Xn8/sH8fXz+fn59/sH8PPn8/fn9w/g9w/g5+/v7+/vD+Dv7+/v7+/3D+D3D+D37+/v7++v3z+A3z+A37+/v7++/3z/APz+Afz+/fz9/Prx+vHz+wfw/PH68frx+f3j+f3z+fP5+fn59fn28/Hz+fPn8/sH8Prx+fH6+fn28/Hz9efz5/Pv7x/A9w/g8+f/A/j+/Pz+ePz6+fH5+vX59fPz5w9g8+fPp5fHl8/nn+f/AGLGJGMh7L+9AAAAAElFTkSuQmCC');
+      opacity: 0.03;
+      z-index: -1;
+      pointer-events: none;
     }
   </style>
 <script type="importmap">
@@ -25,16 +76,15 @@
     "rxjs/webSocket": "https://esm.sh/rxjs@^7.8.2/webSocket?conditions=es2015",
     "rxjs/testing": "https://esm.sh/rxjs@^7.8.2/testing?conditions=es2015",
     "rxjs/fetch": "https://esm.sh/rxjs@^7.8.2/fetch?conditions=es2015",
-    "@angular/common": "https://esm.sh/@angular/common@^18.1.0?external=rxjs",
-    "@angular/platform-browser": "https://esm.sh/@angular/platform-browser@^18.1.0?external=rxjs",
-    "@angular/core": "https://esm.sh/@angular/core@^18.1.0?external=rxjs",
-    "@angular/compiler": "https://esm.sh/@angular/compiler@^18.1.0?external=rxjs"
+    "@angular/compiler": "https://esm.sh/@angular/compiler@^21.1.2?external=rxjs",
+    "@angular/platform-browser": "https://esm.sh/@angular/platform-browser@^21.1.2?external=rxjs",
+    "@angular/core": "https://esm.sh/@angular/core@^21.1.2?external=rxjs"
   }
 }
 </script>
 <link rel="stylesheet" href="/index.css">
 </head>
-<body style="background-image: url('https://i.ibb.co/RGkZvyKw/cdb77b37-9b51-4b22-b96b-54def551a136.png'); background-size: cover; background-attachment: fixed; background-position: center;">
+<body class="antialiased">
   <app-root></app-root>
 </body>
 </html>
